@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="340.0" style="-fx-background-color: #222222;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.aracservisbakim.Giris">
+   <children>
+      <AnchorPane fx:id="giris_ekran" prefHeight="400.0" prefWidth="340.0">
+         <children>
+            <ImageView fitHeight="70.0" fitWidth="70.0" layoutX="135.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icon/avatar.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="giris_hata_metni" alignment="CENTER" contentDisplay="CENTER" layoutX="42.0" layoutY="330.0" prefHeight="25.0" prefWidth="256.0">
+               <font>
+                  <Font name="Ubuntu" size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="giris_isim" layoutX="70.0" layoutY="134.0" prefHeight="28.0" prefWidth="200.0" promptText="Adınız" style="-fx-background-color: #ededed; -fx-border-color: #9f9f9f;">
+               <font>
+                  <Font name="Ubuntu" size="13.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="giriş_soyad" layoutX="70.0" layoutY="169.0" prefHeight="28.0" prefWidth="200.0" promptText="Kullanıcı Adı" style="-fx-background-color: #ededed; -fx-border-color: #9f9f9f;">
+               <font>
+                  <Font name="Ubuntu" size="13.0" />
+               </font>
+            </TextField>
+            <PasswordField fx:id="giris_sifre" layoutX="70.0" layoutY="205.0" prefHeight="28.0" prefWidth="200.0" promptText="Şifre" style="-fx-background-color: #ededed; -fx-border-color: #9f9f9f;">
+               <font>
+                  <Font name="Ubuntu" size="13.0" />
+               </font>
+            </PasswordField>
+            <Button fx:id="giris_yap_buton" layoutX="170.0" layoutY="250.0" onAction="#giris_yap" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: #ff2323;" text="Giriş Yap" textFill="WHITE">
+               <font>
+                  <Font name="Ubuntu" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="kayit_ekrani_buton" layoutX="90.0" layoutY="250.0" onAction="#kayit_ekrani_tıklandi" prefHeight="26.0" prefWidth="80.0" style="-fx-background-radius: 5; -fx-background-color: #222222;" text="Kayıt" textFill="WHITE" underline="true">
+               <font>
+                  <Font name="Ubuntu" size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="kayit_ekran" prefHeight="400.0" prefWidth="340.0">
+         <children>
+            <ImageView fitHeight="70.0" fitWidth="70.0" layoutX="135.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icon/avatar.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="kayit_hata_metni" alignment="CENTER" contentDisplay="CENTER" layoutX="49.0" layoutY="369.0" prefHeight="25.0" prefWidth="256.0">
+               <font>
+                  <Font name="Ubuntu" size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="kayit_ad" layoutX="70.0" layoutY="134.0" prefHeight="28.0" prefWidth="200.0" promptText="Adınız" style="-fx-background-color: #ededed; -fx-border-color: #9f9f9f;">
+               <font>
+                  <Font name="Ubuntu" size="13.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="kayit_soyad" layoutX="70.0" layoutY="169.0" prefHeight="28.0" prefWidth="200.0" promptText="Soyadınız" style="-fx-background-color: #ededed; -fx-border-color: #9f9f9f;">
+               <font>
+                  <Font name="Ubuntu" size="13.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="kayit_yas" layoutX="70.0" layoutY="204.0" prefHeight="28.0" prefWidth="200.0" promptText="Yaşınız" style="-fx-background-color: #ededed; -fx-border-color: #9f9f9f;">
+               <font>
+                  <Font name="Ubuntu" size="13.0" />
+               </font>
+            </TextField>
+            <PasswordField fx:id="kayit_sifre" layoutX="70.0" layoutY="275.0" prefHeight="28.0" prefWidth="200.0" promptText="Şifre" style="-fx-background-color: #ededed; -fx-border-color: #9f9f9f;">
+               <font>
+                  <Font name="Ubuntu" size="13.0" />
+               </font>
+            </PasswordField>
+            <TextField fx:id="kayit_eposta" layoutX="70.0" layoutY="240.0" prefHeight="28.0" prefWidth="200.0" promptText="E-Posta" style="-fx-background-color: #ededed; -fx-border-color: #9f9f9f;">
+               <font>
+                  <Font name="Ubuntu" size="13.0" />
+               </font>
+            </TextField>
+            <Button fx:id="kayit_buton" layoutX="170.0" layoutY="343.0" onAction="#kayit" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: #ff2323;" text="Kayıt Ol" textFill="WHITE">
+               <font>
+                  <Font name="Ubuntu" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="giris_ekrani_buton" layoutX="90.0" layoutY="344.0" onAction="#giris_ekrani_tiklandi" prefHeight="26.0" prefWidth="80.0" style="-fx-background-radius: 5; -fx-background-color: #222222;" text="Giriş" textFill="WHITE" underline="true">
+               <font>
+                  <Font name="Ubuntu" size="14.0" />
+               </font>
+            </Button>
+            <RadioButton fx:id="teknik_servis_elemani_mi" layoutX="70.0" layoutY="314.0" mnemonicParsing="false" text="Teknik Servis Elemanı" textFill="WHITE">
+               <font>
+                  <Font name="Ubuntu" size="13.0" />
+               </font>
+            </RadioButton>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

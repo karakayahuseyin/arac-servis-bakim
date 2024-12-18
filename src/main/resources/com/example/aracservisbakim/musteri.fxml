@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.aracservisbakim.Musteri">
+   <children>
+      <AnchorPane prefHeight="80.0" prefWidth="1080.0" style="-fx-background-color: #232323;">
+         <children>
+            <Label layoutX="40.0" layoutY="26.0" text="ARAÇ SAHİBİ İŞLEMLERİ" textFill="WHITE">
+               <font>
+                  <Font name="FreeSans Bold" size="24.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+      <Pane layoutY="80.0" prefHeight="15.0" prefWidth="1080.0" style="-fx-background-color: #44EE44;" />
+      <Label layoutX="40.0" layoutY="113.0" text="ARAÇLARIM">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <TableView fx:id="araclar_tablo" layoutX="40.0" layoutY="155.0" prefHeight="160.0" prefWidth="1000.0">
+        <columns>
+          <TableColumn fx:id="marka_model_sutun" prefWidth="250.0" text="Marka/ Model" />
+          <TableColumn fx:id="plaka_sutun" minWidth="0.0" prefWidth="250.0" text="Plaka" />
+            <TableColumn fx:id="durum_sutun" minWidth="0.0" prefWidth="250.0" text="Durum" />
+            <TableColumn fx:id="sonraki_periyodik_bakim_sutun" minWidth="0.0" prefWidth="250.0" text="Sonraki Periyodik Bakım" />
+        </columns>
+      </TableView>
+      <Button fx:id="arac_detay_buton" layoutX="840.0" layoutY="113.0" mnemonicParsing="false" onAction="#arac_detay_tiklandi" prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: #444444;" text="Araç Detayı Görüntüle" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+      <AnchorPane fx:id="arac_detay_ekran" layoutX="40.0" layoutY="332.0" prefHeight="350.0" prefWidth="1000.0" style="-fx-background-color: #e3e3e3;">
+         <children>
+            <TableView fx:id="muayene_gecmisi_tablo" layoutX="22.0" layoutY="55.0" prefHeight="270.0" prefWidth="260.0">
+              <columns>
+                <TableColumn fx:id="tarih_sutun" text="Tarih" />
+                <TableColumn fx:id="ariza_tamir_durumu_sutun" prefWidth="180.0" text="Arıza/Tamir Durumu" />
+              </columns>
+            </TableView>
+            <Label layoutX="22.0" layoutY="18.0" text="Muayene Geçmişi">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="313.0" layoutY="18.0" text="Tamir Geçmişi">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <TableView fx:id="tamir_gecmisi_tablo" layoutX="313.0" layoutY="55.0" prefHeight="270.0" prefWidth="660.0">
+               <columns>
+                  <TableColumn fx:id="ariza_sutun" prefWidth="240.0" text="Arıza" />
+                  <TableColumn fx:id="baslangic_tarihi_sutun" prefWidth="140.0" text="Baş. Tarihi" />
+                  <TableColumn fx:id="sure_sutun" prefWidth="140.0" text="Süre (Gün)" />
+                  <TableColumn fx:id="maliyet_sutun" prefWidth="140.0" text="Maliyet" />
+               </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
