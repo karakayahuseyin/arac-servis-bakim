@@ -1,5 +1,8 @@
 package com.example.aracservisbakim;
 
+import com.example.aracservisbakim.controller.KullaniciKontrolör;
+import com.example.aracservisbakim.model.KullaniciModel;
+
 public class Oturum {
     // Singleton tasarım deseni
 
@@ -7,11 +10,13 @@ public class Oturum {
     private int id;
     private String kullaniciAdi;
     private boolean yetki;
+    private KullaniciModel bilgiler;
 
     private Oturum() {
         this.id = 0;
         this.kullaniciAdi = "";
         this.yetki = false;
+        this.bilgiler = null;
     }
 
     public static Oturum getOturum() {
@@ -32,12 +37,14 @@ public class Oturum {
         this.id = id;
         this.kullaniciAdi = kullaniciAdi;
         this.yetki = yetki;
+        this.bilgiler = KullaniciKontrolör.getUserData(this.kullaniciAdi);
     }
 
     public void oturumKapat() {
         this.id = 0;
         this.kullaniciAdi = "";
         this.yetki = false;
+        this.bilgiler = null;
     }
 
     public int getId() {
@@ -51,4 +58,6 @@ public class Oturum {
     public boolean getYetki() {
         return yetki;
     }
+
+    public KullaniciModel getBilgiler() { return bilgiler; }
 }

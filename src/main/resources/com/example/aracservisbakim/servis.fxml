@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
@@ -72,78 +73,76 @@
             </Button>
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="rapor_islemleri_ekran" layoutY="95.0" opacity="0.0" prefHeight="625.0" prefWidth="1080.0">
+      <AnchorPane fx:id="rapor_islemleri_ekran" layoutY="95.0" prefHeight="625.0" prefWidth="1080.0">
          <children>
-            <Label layoutX="29.0" layoutY="25.0" prefHeight="30.0" prefWidth="364.0" text="Yeni Muayene Raporu">
+            <Button fx:id="kaydet_buton" layoutX="461.0" layoutY="563.0" mnemonicParsing="false" onAction="#rapor_kaydet" prefHeight="24.0" prefWidth="200.0" style="-fx-background-color: #454545;" text="Kaydet" textFill="WHITE">
                <font>
-                  <Font name="System Bold" size="18.0" />
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Label layoutX="100.0" layoutY="51.0" prefHeight="30.0" prefWidth="364.0" text="Yeni Muayene Raporu">
+               <font>
+                  <Font name="System Bold" size="24.0" />
                </font>
             </Label>
-            <TextField fx:id="arac_plaka_giris" layoutX="231.0" layoutY="98.0" prefHeight="24.0" prefWidth="223.0" />
-            <TextField fx:id="tarih_giris" layoutX="231.0" layoutY="130.0" prefHeight="24.0" prefWidth="223.0" />
-            <Label layoutX="60.0" layoutY="127.0" prefHeight="30.0" prefWidth="171.0" text="Tarih :">
+            <TextField fx:id="arac_plaka_giris" layoutX="275.0" layoutY="124.0" prefHeight="24.0" prefWidth="223.0" />
+            <TextField fx:id="tarih_giris" layoutX="275.0" layoutY="156.0" prefHeight="24.0" prefWidth="223.0" />
+            <Label layoutX="104.0" layoutY="153.0" prefHeight="30.0" prefWidth="171.0" text="Tarih :">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
-            <Label layoutX="60.0" layoutY="95.0" prefHeight="30.0" prefWidth="171.0" text="Araç Plakası :">
+            <Label layoutX="104.0" layoutY="121.0" prefHeight="30.0" prefWidth="171.0" text="Araç Plakası :">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
-            <Label layoutX="60.0" layoutY="170.0" prefHeight="30.0" prefWidth="364.0" text="Arıza Durumu">
+            <Label layoutX="104.0" layoutY="196.0" prefHeight="30.0" prefWidth="364.0" text="Arıza Durumu">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>
             </Label>
-            <Label layoutX="86.0" layoutY="275.0" text="Arıza ve Tamir Bilgisi Ekle">
+            <Label layoutX="130.0" layoutY="301.0" text="Arıza ve Tamir Bilgisi Ekle">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
             </Label>
-            <Button fx:id="ariza_tamir_ekle_buton" layoutX="60.0" layoutY="272.0" mnemonicParsing="false" onAction="#ariza_tamir_ekle_tiklandi" prefHeight="23.0" prefWidth="21.0" style="-fx-background-color: #dddddd;" text="+">
+            <Button fx:id="ariza_tamir_ekle_buton" layoutX="104.0" layoutY="298.0" mnemonicParsing="false" onAction="#ariza_tamir_ekle_tiklandi" prefHeight="23.0" prefWidth="21.0" style="-fx-background-color: #dddddd;" text="+">
                <font>
                   <Font name="System Bold" size="9.0" />
                </font>
             </Button>
-            <TableView fx:id="arıza_tamir_tablo" layoutX="60.0" layoutY="313.0" prefHeight="283.0" prefWidth="960.0">
+            <TableView fx:id="ariza_tamir_tablo" layoutX="100.0" layoutY="339.0" prefHeight="200.0" prefWidth="880.0">
               <columns>
-                <TableColumn fx:id="ariza_sutun" prefWidth="240.0" text="Arıza" />
-                <TableColumn fx:id="yedek_parca_sutun" prefWidth="180.0" text="Yedek Parça" />
-                  <TableColumn fx:id="iscilik_ucreti_sutun" prefWidth="180.0" text="İşçilik Ücreti" />
-                  <TableColumn fx:id="tamir_suresi_sutun" prefWidth="180.0" text="Tamir Süresi" />
-                  <TableColumn fx:id="maliyet_sutun" prefWidth="180.0" text="Maliyet" />
+                <TableColumn fx:id="yedek_parca_sutun" prefWidth="220.0" text="Yedek Parça" />
+                  <TableColumn fx:id="iscilik_ucreti_sutun" prefWidth="220.0" text="İşçilik Ücreti" />
+                  <TableColumn fx:id="tamir_suresi_sutun" prefWidth="220.0" text="Tamir Süresi" />
+                  <TableColumn fx:id="maliyet_sutun" prefWidth="220.0" text="Maliyet" />
               </columns>
             </TableView>
-            <TextField fx:id="ariza_giris" layoutX="185.0" layoutY="203.0" prefHeight="24.0" prefWidth="223.0" />
-            <Label layoutX="60.0" layoutY="200.0" prefHeight="30.0" prefWidth="125.0" text="Arıza : ">
+            <Label layoutX="105.0" layoutY="226.0" prefHeight="30.0" prefWidth="125.0" text="Yedek Parça :">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
-            <TextField fx:id="yedek_parca_giris" layoutX="579.0" layoutY="203.0" prefHeight="24.0" prefWidth="223.0" />
-            <Label layoutX="454.0" layoutY="200.0" prefHeight="30.0" prefWidth="125.0" text="Yedek Parça :">
+            <TextField fx:id="iscilik_ucreti_giris" layoutX="229.0" layoutY="261.0" prefHeight="24.0" prefWidth="223.0" />
+            <Label layoutX="104.0" layoutY="258.0" prefHeight="30.0" prefWidth="125.0" text="İşçilik Ücreti :">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
-            <TextField fx:id="iscilik_ucreti_giris" layoutX="185.0" layoutY="235.0" prefHeight="24.0" prefWidth="223.0" />
-            <Label layoutX="60.0" layoutY="232.0" prefHeight="30.0" prefWidth="125.0" text="İşçilik Ücreti :">
+            <TextField fx:id="tamir_suresi_giris" layoutX="623.0" layoutY="229.0" prefHeight="24.0" prefWidth="223.0" />
+            <Label layoutX="498.0" layoutY="226.0" prefHeight="30.0" prefWidth="125.0" text="Tamir Süresi :">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
-            <TextField fx:id="tamir_suresi_giris" layoutX="579.0" layoutY="235.0" prefHeight="24.0" prefWidth="223.0" />
-            <Label layoutX="454.0" layoutY="232.0" prefHeight="30.0" prefWidth="125.0" text="Tamir Süresi :">
-               <font>
-                  <Font size="14.0" />
-               </font>
-            </Label>
-            <Label layoutX="60.0" layoutY="64.0" prefHeight="30.0" prefWidth="364.0" text="Bilgi">
+            <Label layoutX="104.0" layoutY="90.0" prefHeight="30.0" prefWidth="364.0" text="Bilgi">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>
             </Label>
+            <ComboBox fx:id="yedek_parca_giris" layoutX="229.0" layoutY="229.0" prefHeight="24.0" prefWidth="223.0" />
          </children>
       </AnchorPane>
    </children>

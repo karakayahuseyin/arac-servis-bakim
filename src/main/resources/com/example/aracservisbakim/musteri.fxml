@@ -57,10 +57,13 @@
             </Label>
             <TableView fx:id="tamir_gecmisi_tablo" layoutX="313.0" layoutY="55.0" prefHeight="270.0" prefWidth="660.0">
                <columns>
-                  <TableColumn fx:id="ariza_sutun" prefWidth="240.0" text="Arıza" />
-                  <TableColumn fx:id="baslangic_tarihi_sutun" prefWidth="140.0" text="Baş. Tarihi" />
-                  <TableColumn fx:id="sure_sutun" prefWidth="140.0" text="Süre (Gün)" />
-                  <TableColumn fx:id="maliyet_sutun" prefWidth="140.0" text="Maliyet" />
+                  <TableColumn fx:id="tamir_ariza_sutun" prefWidth="100.0" text="Arıza" />
+                  <TableColumn fx:id="tamir_sure_sutun" prefWidth="140.0" text="Süre (Saat)" />
+                  <TableColumn fx:id="tamir_tarih_sutun" prefWidth="140.0" text="Baş. Tarihi" />
+                  <TableColumn fx:id="tamir_marka_sutun" prefWidth="140.0" text="Marka" />
+                  <TableColumn fx:id="tamir_model_sutun" prefWidth="140.0" text="Model" />
+                  <TableColumn fx:id="tamir_plaka_sutun" prefWidth="140.0" text="Plaka" />
+                  <TableColumn fx:id="tamir_maliyet_sutun" prefWidth="140.0" text="Toplam Maliyet" />
                </columns>
             </TableView>
          </children>

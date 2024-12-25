@@ -6,6 +6,8 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+import java.sql.Connection;
+
 public class Uygulama extends Application {
     @Override
     public void start(Stage stage) throws Exception {

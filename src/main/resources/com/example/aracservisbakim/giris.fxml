@@ -29,7 +29,7 @@
                   <Font name="Ubuntu" size="13.0" />
                </font>
             </TextField>
-            <TextField fx:id="giriş_soyad" layoutX="70.0" layoutY="169.0" prefHeight="28.0" prefWidth="200.0" promptText="Kullanıcı Adı" style="-fx-background-color: #ededed; -fx-border-color: #9f9f9f;">
+            <TextField fx:id="giris_kullaniciAdi" layoutX="70.0" layoutY="169.0" prefHeight="28.0" prefWidth="200.0" promptText="Kullanıcı Adı" style="-fx-background-color: #ededed; -fx-border-color: #9f9f9f;">
                <font>
                   <Font name="Ubuntu" size="13.0" />
                </font>

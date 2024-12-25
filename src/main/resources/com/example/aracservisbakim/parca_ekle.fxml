@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="380.0" prefWidth="334.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TextField fx:id="parca_adi_text" layoutX="93.0" layoutY="79.0" />
+      <Label layoutX="125.0" layoutY="55.0" text="Yedek Parça Adı" />
+      <TextField fx:id="stok_text" layoutX="93.0" layoutY="137.0" />
+      <Label layoutX="156.0" layoutY="113.0" text="Stok" />
+      <Label layoutX="125.0" layoutY="178.0" text="Araba Modeli" />
+      <TextField fx:id="fiyat_text" layoutX="93.0" layoutY="260.0" />
+      <Label layoutX="155.0" layoutY="243.0" text="Fiyat" />
+      <Button layoutX="194.0" layoutY="331.0" mnemonicParsing="false" onAction="#yeni_kayit" prefHeight="26.0" prefWidth="66.0" style="-fx-background-color: green;" text="Kayıt Ekle" textFill="WHITE" />
+      <Button layoutX="59.0" layoutY="331.0" mnemonicParsing="false" onAction="#ekle_iptal" prefHeight="25.0" prefWidth="66.0" style="-fx-background-color: red;" text="İptal" textFill="WHITE" />
+      <ComboBox fx:id="model_combo" layoutX="93.0" layoutY="207.0" onShowing="#comboEvent" prefWidth="150.0" />
+   </children>
+</AnchorPane>
